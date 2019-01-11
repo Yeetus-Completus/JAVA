@@ -1,12 +1,12 @@
 package Chapter05;
 
+import java.util.Scanner;
+
 /**
  * Tells the number of positive and negative numbers in a set
  *
- * @author gh1016793
+ * @author George Hartman
  */
-import java.util.Scanner;
-
 public class C5_1 {
 
     /**

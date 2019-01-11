@@ -1,17 +1,12 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package Chapter05;
+
+import java.util.Scanner;
 
 /**
  * Displays the number of votes
  *
- * @author gh1016793
+ * @author George Hartman
  */
-import java.util.Scanner;
-
 public class P5 {
 
     /**
@@ -52,5 +47,3 @@ public class P5 {
     }
 
 }
-
-

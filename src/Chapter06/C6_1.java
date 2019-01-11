@@ -1,12 +1,12 @@
 package Chapter06;
 
+import java.util.Scanner;
+
 /**
  * Creates a password
  *
- * @author gh1016793
+ * @author George Hartman
  */
-import java.util.Scanner;
-
 public class C6_1 {
 
     /**
@@ -22,8 +22,14 @@ public class C6_1 {
         System.out.println(isValid(password) ? "Valid Password" : "Invalid Password");
     }
 
+    /**
+     * Checks the length of password
+     *
+     * @param password checks the length
+     * @return boolean value
+     */
     public static boolean isValid(String password) {
-        // Atleast 8 characters
+// Atleast 8 characters
         if (password.length() < 8) {
             System.out.println("A password must have at least eight characters");
             return false;

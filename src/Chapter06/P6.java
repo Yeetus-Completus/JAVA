@@ -1,12 +1,12 @@
 package Chapter06;
 
+import java.util.Scanner;
+
 /**
  * Displays currency conversion rate
  *
- * @author gh1016793
+ * @author George Hartman
  */
-import java.util.Scanner;
-
 public class P6 {
 
     /**
@@ -54,7 +54,14 @@ public class P6 {
         } while (popTheQuestion.equalsIgnoreCase("yes"));
     }
 
+    /**
+     *
+     * @param dollars gets its value changed
+     * @param exchangeRate changes the value of dollars
+     * @return new value of dollars
+     */
     public static double convert(double dollars, double exchangeRate) {
+
         if (dollars > 100) {
             return (0.95 * dollars * exchangeRate);
         } else {
