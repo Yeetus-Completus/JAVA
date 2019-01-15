@@ -55,6 +55,7 @@ public class P6 {
     }
 
     /**
+     * Conversion Method
      *
      * @param dollars gets its value changed
      * @param exchangeRate changes the value of dollars
