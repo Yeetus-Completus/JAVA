@@ -1,6 +1,6 @@
 package Chapter07;
 
-import java.util.Scanner;
+import java.util.*;
 
 /**
  * Reads the numbers the user puts them into a array and gives the average
@@ -18,8 +18,8 @@ public class P7 {
         Scanner input = new Scanner(System.in);
         System.out.print("How mamy numbers will be read?");
         int numberAmount = input.nextInt();
-        int numbers[] = new int[numberAmount];
-        numberPlacer(numbers);
+        ArrayList<Integer> numbers = new ArrayList<>(numberAmount);
+        numberPlacer(numbers, numberAmount);
         double average = average(numbers);
         System.out.println("the average is " + average);
         numberReader(numbers);
@@ -29,13 +29,14 @@ public class P7 {
      * Places user numbers numbers in the array
      *
      * @param x = empty array
+     * @param y = the capacity of the array list
      */
-    public static void numberPlacer(int x[]) {
+    public static void numberPlacer(ArrayList<Integer> x, int y) {
         Scanner input = new Scanner(System.in);
-        for (int counter = 0; counter < x.length; counter++) {
+        for (int counter = 0; counter < y; counter++) {
             System.out.print("What is the number");
             int number = input.nextInt();
-            x[counter] = number;
+            x.add(counter, number);
 
         }
     }
@@ -46,13 +47,13 @@ public class P7 {
      * @param x = the filled array
      * @return the average of the numbers in the array
      */
-    public static double average(int x[]) {
+    public static double average(ArrayList<Integer> x) {
         double y = 0;
-        for (int counter = 0; counter < x.length; counter++) {
-            y = y + x[counter];
+        for (int counter = 0; counter < x.size(); counter++) {
+            y = y + x.get(counter);
         }
 
-        return y / x.length;
+        return y / x.size();
     }
 
     /**
@@ -60,8 +61,7 @@ public class P7 {
      *
      * @param x = the filled array
      */
-    public static void numberReader(int x[]) {
-
-        System.out.println(java.util.Arrays.toString(x));
+    public static void numberReader(ArrayList<Integer> x) {
+        System.out.println(x);
     }
 }
